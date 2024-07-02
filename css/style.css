@@ -19,192 +19,219 @@ body {
     
 }
 
-.toggle-button {
-    display: none; /* Defaultnya tombol tidak terlihat */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1000;
-}
-
-.toggle-button .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--hitam);
-    margin: 4px 0;
-    transition: transform 0.4s ease;
+p {
+    font-size: 120%; 
 }
 
 /* navbar start */
 header.nav-container {
-    position: relative;
-    margin-top: 1%;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 20% auto;
-    padding: 5px;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    padding: 2px 24px;
+    background-color: var(--krim);
+    border-radius: 50px;
 }
 
-div.logo-icon {
-    margin-left: 15px;
-    display: grid;
-    grid-template-columns: 40% auto;
+.nav-container > .menu {
+    display: flex;
 }
 
-.logo-icon a {
-    text-decoration:none;
-    margin: 10px 8px 10px 0px;
-    font-family: "Mulish", sans-serif;
-    font-weight: 800;
+
+.logo-icon {
+    padding: 5px 0 5px  0;
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo-text {
+    text-decoration: none;
+    font-size: 150%;
+    vertical-align: middle;
+    padding-left: 5px;
+    font-weight: 600;
     color: var(--oren);
-    font-size: x-large;
-}
-
-nav {
-    padding-top: 13px;
-    text-align:right;
-    padding-right: 10px;
 }
 
 a.nav-text {
     color: var(--hitam);
-    text-decoration:none;
-    margin: 10px;
-    padding-left: 2%;
-    padding-right: 3%;
-    font-weight: 500;
-}
-
-img.div-logo {
-    width: 50px; 
-    height: auto; 
-    text-align: center;
+    text-decoration: none;
+    margin: 0 30px 0 30px;
+    font-weight: 600;
+    font-size: 120%;
 }
 /* navbar end */
 
 
 /* home start */
 section.home {
-    margin: 0 auto;
-    margin-top: 4%;
-
-    border-radius: 20px;
-    display: grid;
-    grid-template-columns: 40% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: left;
+    padding: 20px;
+    margin-bottom: 40px;
 }
 
-.home header {
-    padding-top: 20%;
-    width: 85%; 
-    margin: 0 auto; 
-    text-align: left;
+section.home > div {
+    margin-right: 2px;
+}
+
+section.home > div > h1 {
+    font-size: 150%;
+}
+
+
+b {
+    color: var(--oren);
 }
 
 div.banner-container {
     width: 100%; 
-    height: 500px; 
-    position: center; 
-    overflow: hidden; 
-    padding-right: 5px;
+    height: 500px;
+    overflow: hidden;
+    padding: 10px 0 0 20px; 
 }
 
 .banner-container img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
     border-radius: 20px;
 }
 /* home end */
 
-
-/* profile start */
 section.profile {
-    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: left;
+    padding: 20px;
     background-color: var(--krim);
-    border-radius: 30px 30px 0px 0px;
+    border-radius: 10px 10px 0 0;
 }
-/* profile end */
 
 
-@media only screen and (max-width: 600px) {
-    /* Aturan CSS untuk layar ponsel */
-    body {
-        padding: 4%;
-    }
-
-    .logo-icon a {
-        display: none;
-    }
-
-    .toggle-button {
-        display: block; 
-    }
-
-    nav {
-        display: none; 
-        position: absolute;
-        top: 60px; 
-        right: 5%;
-        border-radius: 10px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        width: 140px; 
-        z-index: 999; 
-    }
-
-    nav.active {
-        display: block; 
-        text-align: right;
-        background-color: var(--putih);
-    }
-    
-    a.nav-text {
-        padding: 10px;
-        margin-top: 4px;
-    }
-
-    .toggle-button.active .bar:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    .toggle-button.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .toggle-button.active .bar:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-    }
-
-    section.home {
-        grid-template-columns: 100%;
-    }
-
-    .home header {
-        padding-top: 1px;
-        padding-bottom: 10px;
+ /* Media Query for low resolution  Tablets, Ipads */
+ @media (min-width: 481px) and (max-width: 767px) {
+    header.nav-container {
+        flex-direction: column;
     }
 
     div.banner-container {
+        width: 100%; 
         height: 300px;
+        overflow: hidden;
+        
+    }
+    
+    .banner-container img {
+        width: 80%;
+        height: auto; 
+        object-fit: cover;
+        border-radius: 20px;
     }
 
-    /* Aturan tambahan sesuai kebutuhan */
+    section.home {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    div.banner-container {
+        height: auto; 
+        padding: 0; 
+    }
 }
 
-@media only screen and (max-width:800px) {
-    /* Aturan CSS untuk tablet */
+@media (max-width: 480px) {
+    body {
+        header.nav-container {
+            flex-direction: column;
+        }
+    
+        div.banner-container {
+            width: 120%; 
+            height: 300px;
+            overflow: hidden;
+            
+        }
+        
+        .banner-container img {
+            width: 100%;
+            height: auto; 
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    
+        section.home {
+            flex-direction: column; 
+            text-align: center; 
+        }
+    
+        div.banner-container {
+            height: auto; 
+            padding: 0; 
+        }
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
     header.nav-container {
-        margin-top: 1%;
-        display: grid;
-        grid-template-columns: 20% auto;
-        padding: 5px;
-        margin-bottom: 10px;
+        flex-direction: column;
+    }
+
+    div.banner-container {
+        width: 100%; 
+        height: 300px;
+        overflow: hidden;
+        
+    }
+    
+    .banner-container img {
+        width: 80%;
+        height: auto; 
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    section.home {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    div.banner-container {
+        height: auto; 
+        padding: 0; 
+    }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    
+    div.banner-container {
+        width: 100%; 
+        height: 300px;
+        overflow: hidden;
+        
+    }
+    
+    .banner-container img {
+        width: 80%;
+        height: auto; 
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    section.home {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    div.banner-container {
+        height: auto; 
+        padding: 0; 
     }
 }
