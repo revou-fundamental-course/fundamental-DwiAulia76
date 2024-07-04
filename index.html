@@ -15,6 +15,12 @@
             <img class="logo-icon" src="../assets/logo.png">
             <a class="logo-text" href="">산 SAN </a>
          </div>
+
+         <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
             
         <div class="menu">
             <a class="nav-text" href="">home</a>
@@ -22,6 +28,7 @@
             <a class="nav-text" href="">Portofolio</a>
             <a class="nav-text" href="">messafe us</a>
         </div>
+        
     </header>
     <hr>
 
@@ -43,42 +50,80 @@
 
         <!-- Our profile -->
          <section class="profile">
-            <div>
-                <img class="img-profile" src="../assets/profil.png">
+            <div class="img-profile">
+                <img  src="../assets/profil.png">
             </div>
 
-            <div>
-                <h1 class="profile-text">Halo! </h1>
-                <p class="profile-text">Nama saya Dwi Aulia Juniarti, <br>seorang mahasiswa Teknik Informatika yang 
+            <div class="profile-text">
+                <h1>Halo! </h1>
+                <p>Nama saya Dwi Aulia Juniarti, <br>seorang mahasiswa Teknik Informatika yang 
                     sedang mengejar minat dan passion saya dalam dunia teknologi. 
                     <br>Saat ini saya aktif mengembangkan keterampilan dalam pemrograman.</p>
             </div>
          </section>
 
     <!-- Portofolio -->
-    <section  class="portofolio">
-        <div>
-            <h1>HI, WELCOME</h1>
+    <section class="portofolio">
+        <div class="portofolio-text">
+            <h1>Portofolio</h1>
         </div>
 
-        <div>
-            <p>Ini adalah latihan pertama</p>
+        <div class="content-wrapper">
+            <div class="img-portofolio">
+                <img src="../assets/poster.jpg" alt="">
+            </div>
+            <div class="img-txt">
+                <p>Berpatisipasi dalam proyek Proyek Berbasis Langsung (PBL) pada semester 2, 
+                    pengembangan sebuah website untuk penjualan barang atau jasa. <br> 
+                    Menggunakan framework Laravel untuk pengembangan backend dan Tailwind CSS untuk desain frontend. 
+                    Peran saya terutama berfokus pada pengembangan bagian backend dari aplikasi ini. </p>
+            </div>
+        </div> 
 
-            <div class="banner-container"></div>
+        <div class="content-wrapper2">
+        <div class="img-portofolio2">
+            <img src="../assets/2.jpg" alt="">
         </div>
-     </section>
+        <div class="img-txt2">
+            <p>Proyek pengerjaan branding produk di SMK melibatkan 
+                pembuatan identitas unik untuk produk tertentu menggunakan Adobe Ilustrator dan Adobe Photoshop. <br>
+                Ini meliputi penentuan nama produk, desain logo, pemilihan warna, 
+                serta strategi pemasaran yang sesuai dengan target pasar.</p>
+        </div>
+
+    </div>
+    </section>
 
     <!-- Message Us -->
     <section class="message">
         <div >
-            <h1>HI, WELCOME</h1>
+            <h1>Message Us</h1>
         </div>
 
-        <div>
-            <p>Ini adalah latihan pertama</p>
-
-            <div class="banner-container">
+        <div class="form">
+            <div class="form-container">
+                <form id="myForm">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama" required>
                 
+                    <label for="tanggal_lahir">Tanggal Lahir:</label>
+                    <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+                
+                    <label for="jenis_kelamin">Jenis Kelamin:</label>
+                    <select id="jenis_kelamin" name="jenis_kelamin" required>
+                        <option value="laki-laki">Laki-laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="4" required></textarea>
+                
+                    <button type="button" onclick="submitForm()">Submit</button>
+                </form>
+            </div>
+        
+            <div class="hasil" id="hasilForm">
+                <!-- hasil submit -->
             </div>
         </div>
      </section>
@@ -87,13 +132,9 @@
     </main>
 
     <!-- footer -->
-     <footer>vbnm,sncmc</footer>
-     <br>
-     <br><br>
-     <br><br><br><br>
-     <br><br>
-    
+    <footer>
+        © 2024 Dwi Aulia Juniarti. 
+    </footer>
 
-   
 </body>
 </html>
