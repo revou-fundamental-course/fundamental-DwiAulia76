@@ -72,6 +72,7 @@ a.nav-text {
 /* home start */
 section.home {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center; 
     text-align: left;
@@ -79,6 +80,58 @@ section.home {
     margin-bottom: 40px;
 }
 
+.mySlides {
+    display:contents;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: var(--putih);
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 section.home > div {
     margin-right: 2px;
 }
@@ -96,6 +149,7 @@ div.banner-container {
     width: 100%; 
     height: 500px;
     overflow: hidden;
+position: relative;
     padding: 10px 0 0 20px; 
 }
 
@@ -279,28 +333,36 @@ footer {
         }
         
         
-        div.banner-container {
-            width: 120%; 
-            height: 300px;
-            overflow: hidden;
-            
-        }
-        
-        .banner-container img {
-            width: 100%;
-            height: auto; 
-            object-fit: cover;
-            border-radius: 20px;
-        }
-    
         section.home {
-            flex-direction: column; 
-            text-align: center; 
+            flex-direction: column;
+            padding: 10px;
+        }
+    
+        section.home > div {
+            margin-right: 0;
+        }
+    
+        section.home > div > h1 {
+            font-size: 120%;
         }
     
         div.banner-container {
-            height: auto; 
-            padding: 0; 
+            height: 300px;
+            padding: 10px 0 0 10px;
+        }
+    
+        .banner-container img {
+            border-radius: 10px;
+        }
+    
+        .prev, .next {
+            font-size: 14px;
+            padding: 10px;
+        }
+    
+        .dot {
+            height: 10px;
+            width: 10px;
         }
 
         .profile {
@@ -339,6 +401,29 @@ footer {
             margin-bottom: 20px; 
         }
     
+        .content-wrapper2 {
+            padding: 5% 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+          }
+          
+          .img-portofolio2 {
+            margin-bottom: 20px; 
+          }
+          
+          .img-portofolio2 img {
+            width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+          }
+          
+          .img-txt2 p {
+            margin-bottom: 10px;
+          }
+          
 }
 
  /* Media Query for low resolution  Tablets, Ipads */
@@ -411,6 +496,43 @@ footer {
     .img-portofolio {
         margin-bottom: 20px; 
     }
+
+    .content-wrapper2 {
+        padding: 5% 0;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+      }
+      
+      .img-portofolio2 {
+        margin-bottom: 20px; 
+      }
+      
+      .img-portofolio2 img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      .img-txt2 p {
+        margin-bottom: 10px;
+      }
+
+      .form {
+        flex-direction: column;
+    }
+   .form.form-container,.form.hasil {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    input, textarea, select {
+        width: 100%;
+    }
+    button {
+        float: none;
+        width: 100%;
+    }
 }
 
 
@@ -467,6 +589,31 @@ footer {
     .img-portofolio {
         margin-bottom: 20px; 
     }
+
+    .content-wrapper2 {
+        padding: 5% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+      }
+      
+      .img-portofolio2 {
+        margin-bottom: 20px; 
+      }
+      
+      .img-portofolio2 img {
+        width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+      }
+      
+      
+      
+      .img-txt2 p {
+        margin-bottom: 10px;
+      }
 
 }
 

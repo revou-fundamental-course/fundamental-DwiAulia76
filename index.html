@@ -22,34 +22,47 @@
         <div class="bar"></div>
     </div>
             
-        <div class="menu">
-            <a class="nav-text" href="">home</a>
-            <a class="nav-text" href="">Profile</a>
-            <a class="nav-text" href="">Portofolio</a>
-            <a class="nav-text" href="">messafe us</a>
-        </div>
+    <div class="menu" id="myMenu">
+        <a class="nav-text" href="#home">home</a>
+        <a class="nav-text" href="#profile">Profile</a>
+        <a class="nav-text" href="#portofolio">Portofolio</a>
+        <a class="nav-text" href="#message">message</a>
+      </div>
         
     </header>
     <hr>
 
     <main>
         <!-- Home content -->
-         <section class="home">
+        <section class="home" id="home">
             <div>
-                <h1>HI, WELCOME!</h1>
-                <p> <b>SAN (산)</b>, dalam bahasa korea yang berarti gunung. <br>
-                    Terinspirasi dengan cita rasa sup yang selalu dihidangkan saat cuaca dingin maupun hangat. <br>
-                    Kini, sup Korea yang anda inginkan dapat dinikmati di <b>SAN, The Taste Of Korean Soup</b>
-                </p>
+              <h1>HI, WELCOME!</h1>
+              <p> <b>SAN (산)</b>, dalam bahasa korea yang berarti gunung. <br>
+                Terinspirasi dengan cita rasa sup yang selalu dihidangkan saat cuaca dingin maupun hangat. <br>
+                Kini, sup Korea yang anda inginkan dapat dinikmati di <b>SAN, The Taste Of Korean Soup</b>
+              </p>
             </div>
             
             <div class="banner-container">
+                <div class="mySlides fade active">
                 <img src="../assets/palang.jpg" alt="">
+              </div>
+              <div class="mySlides fade">
+                <img src="../assets/stamp.jpg" alt="">
+              </div>
+              
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-         </section>
+
+            <div style="text-align:center">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+              </div>
+          </section>
 
         <!-- Our profile -->
-         <section class="profile">
+         <section class="profile" id="profile">
             <div class="img-profile">
                 <img  src="../assets/profil.png">
             </div>
@@ -63,7 +76,7 @@
          </section>
 
     <!-- Portofolio -->
-    <section class="portofolio">
+    <section class="portofolio" id="portofolio">
         <div class="portofolio-text">
             <h1>Portofolio</h1>
         </div>
@@ -83,6 +96,7 @@
         <div class="content-wrapper2">
         <div class="img-portofolio2">
             <img src="../assets/2.jpg" alt="">
+            <img src="../assets/3.jpg" alt="">
         </div>
         <div class="img-txt2">
             <p>Proyek pengerjaan branding produk di SMK melibatkan 
@@ -95,7 +109,7 @@
     </section>
 
     <!-- Message Us -->
-    <section class="message">
+    <section class="message" id="message">
         <div >
             <h1>Message Us</h1>
         </div>
